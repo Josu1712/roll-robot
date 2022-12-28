@@ -27,6 +27,8 @@ public class new_world extends World
     private void prepare()
     {
         generate_kotak1();
+        rbt_1 rbt_1 = new rbt_1();
+        addObject(rbt_1,283,797);
     }
     
     
