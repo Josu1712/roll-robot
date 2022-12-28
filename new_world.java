@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class new_world extends World
 {
-
+    static int level = 0;
     /**
      * Constructor for objects of class new_world.
      * 
@@ -17,5 +17,33 @@ public class new_world extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(584, 900, 1); 
+        prepare();
     }
+    
+    /**
+     * Prepare the world for the start of the program.
+     * That is: create the initial objects and add them to the world.
+     */
+    private void prepare()
+    {
+        generate_kotak1();
+    }
+    
+    
+     void generate_kotak1()
+    {
+        if(level==0){
+        for(int i = 0; i < 3; i++)
+        {
+            kotak kotak = new kotak();
+            addObject(kotak,Greenfoot.getRandomNumber(400), 70);
+            kotak.avoidOverlap();
+        }     
+    }   
+    }
+    
 }
+
+
+
+
