@@ -52,7 +52,7 @@ public class new_world extends World
         if(level==1){
         for(int i = 0; i < 13; i++)
         {
-            kotak kotak = new kotak();
+            lvl1 kotak = new lvl1();
             kotak.hp = main(1, 10);
             addObject(kotak,Greenfoot.getRandomNumber(550), main(90,600));
             kotak.avoidOverlap();

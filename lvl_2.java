@@ -8,7 +8,6 @@ import java.util.Random;
  */
 public class lvl_2 extends World
 {
-    static int level = 1;
     static score skor = new score("Skor : ");
     /**
      * Constructor for objects of class lvl_2.
@@ -48,20 +47,20 @@ public class lvl_2 extends World
     }
      void generate_kotak1()
     {
-        if(level==1){
+        if(new_world.level==1){
         for(int i = 0; i < 13; i++)
         {
-            kotak kotak = new kotak();
+            lvl1 kotak = new lvl1();
             kotak.hp = main(1, 10);
             addObject(kotak,Greenfoot.getRandomNumber(550), main(90,600));
             kotak.avoidOverlap();
         }
     } else 
-    if(level==2){
+    if(new_world.level==2){
         for(int i = 0; i < 13; i++)
         {
-            kotak kotak = new kotak();
-            kotak.hp = main(1, 20);
+            lvl2 kotak = new lvl2();
+            kotak.hp = main(10, 20);
             addObject(kotak,Greenfoot.getRandomNumber(550), main(90,600));
             kotak.avoidOverlap();
         }    

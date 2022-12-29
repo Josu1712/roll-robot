@@ -18,9 +18,7 @@ public class kotak extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act(){
-        this.nyawa.setValue(hp);
-        getWorld().addObject(this.nyawa, getX(), getY());
-        aboutKotak();
+
     }
     
     public void avoidOverlap(){
@@ -33,20 +31,5 @@ public class kotak extends Actor
         setLocation(getX(), getY() + 20);
     }
     
-    public void aboutKotak(){
-        if(isTouching(rbt_1.class)){
-        hp--;
-        new_world.skor.add(1);
-        if(hp == 0){
-        getWorld().removeObject(this);
-        if(new_world.skor.getValue() >= (new_world.level+1)*25)
-                {
-                    new_world.level++;
-                    String levelup = "level "+ new_world.level;
-                    Greenfoot.setWorld(new lvl_2());
-        }
-        }
-    }
 
-}
 }

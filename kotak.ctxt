@@ -8,6 +8,4 @@ comment2.params=
 comment2.target=void\ avoidOverlap()
 comment3.params=
 comment3.target=void\ maju()
-comment4.params=
-comment4.target=void\ aboutKotak()
-numComments=5
+numComments=4
