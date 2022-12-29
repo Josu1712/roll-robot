@@ -35,13 +35,6 @@ public abstract class SmoothMover extends Actor
         double radians = Math.toRadians(getRotation());
         double dx = Math.cos(radians) * distance;
         double dy = Math.sin(radians) * distance;
-        
-        if (isAtEdge()){
-            if(getX()<= 5 || getX()>=580){
-                dx = -dx;
-            }
-    
-        }
         setLocation(exactX + dx, exactY + dy);
     }
     
@@ -81,5 +74,10 @@ public abstract class SmoothMover extends Actor
     public double getExactY() 
     {
         return exactY;
+    }
+    public void rest(){
+        if(getY() >= 800){
+            move(0);
+        }
     }
 }

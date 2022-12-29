@@ -15,12 +15,17 @@ public class gun extends Actor
     public void act()
     {
         // Add your action code here.
+        mouse();
         
+    }
+    public void mouse(){
         if(Greenfoot.mouseClicked(null)){
             rbt_1 rbt = new rbt_1();
             getWorld().addObject(rbt, getX(), getY());
             rbt.setRotation(getRotation());
+            
             getWorld().removeObject(this);
+            
         }
         if(Greenfoot.mouseMoved(null)){
             MouseInfo mouse = Greenfoot.getMouseInfo();
@@ -28,10 +33,8 @@ public class gun extends Actor
             int ry = mouse.getY() - getY();
             int angle = (int) (Math.atan2(ry,rx)*180/Math.PI);
             laser laser = new laser();
-            getWorld().addObject(laser,getX(),getY());
-            if(Greenfoot.mouseClicked(null)){
-                getWorld().removeObject(laser);
-            }
+            getWorld().addObject(laser, getX(), getY());
+            getWorld().removeObject(laser);
             setRotation(angle);
         }
     }

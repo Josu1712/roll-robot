@@ -18,47 +18,49 @@ public class rbt_1 extends SmoothMover
     public void act()
     {
         // Add your action 
-        move(5);
-        
+        move(20);
+        launch();
         bounce();
+        
+    }
+    public void run(){
+        x++;
+        if(x == 60){
+            getWorld().addObject(this, getY()+20, getX()+20);
+            x = 0;
+        }
+        if (isAtEdge()){
+            turn(45);
+        }
+    }
+    public void bounce(){
+        if (isAtEdge()){
+            turn(-90);
+        }
+         if (getY() >= 800){
+            gun gun = new gun();
+            getWorld().addObject(gun, getX(), getY());
+            laser laser = new laser();
+            getWorld().addObject(laser,getX(),getY());
+            getWorld().removeObject(this);
+        if(Greenfoot.mouseClicked(null)){
+                getWorld().removeObject(laser);
+            }
+        }
+    }
+    public void rest(){
+        if(getY() >= 800){
+            move(0);
+        }
+    }
+    public void launch(){
         if (Greenfoot.mouseClicked(null)){
             MouseInfo mouse = Greenfoot.getMouseInfo();
             int rx = mouse.getX() - getX();
             int ry = mouse.getY() - getY();
             int angle = (int) (Math.atan2(rx,ry)*180.0/Math.PI);
             setRotation(angle);
-        }
+        }        
     }
-    public void run(){
-        for (int i = 0 ; i <= 4 ; i++){
-            move(5);
-        if (isAtEdge()){
-            setLocation(getX()+100, getY()+100);
-            dx = dx;
-            dy = -dy;
-            }
-        }
-        if(isAtEdge()){
-            
-        }
-    }
-    public void bounce(){
-        if (isAtEdge()){
-            if(getX()<= 5 || getX()>=580){
-                setLocation(getX()-1, getY());
-                
-            }
-        }
-        if(isAtEdge()){
-            
-            if(getY() <=5 || getY()>= 855){
-                
-                
-            }
-        }
-        if(getY() >= 800){
-            dx = 0;
-            dy = 0;
-        }
-    }
+
 }

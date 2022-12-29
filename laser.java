@@ -14,12 +14,15 @@ public class laser extends Actor
      */
     public void act()
     {
-         if(Greenfoot.mouseMoved(null)){
+        if(Greenfoot.mouseMoved(null)){
             MouseInfo mouse = Greenfoot.getMouseInfo();
             int rx = mouse.getX() - getX();
             int ry = mouse.getY() - getY();
             int angle = (int) (Math.atan2(ry,rx)*180/Math.PI);
             setRotation(angle);
+        }
+        if(isTouching(laser.class)){
+            getWorld().removeObject(this);
         }
     }
 }
