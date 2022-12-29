@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.Random;
 /**
  * Write a description of class new_world here.
  * 
@@ -43,10 +43,11 @@ public class new_world extends World
         for(int i = 0; i < 3; i++)
         {
             kotak kotak = new kotak();
+            kotak.hp = Greenfoot.getRandomNumber(5);
             addObject(kotak,Greenfoot.getRandomNumber(400), 70);
             kotak.avoidOverlap();
-        }     
-    }   
+        }
+    }
     }
     
 }
