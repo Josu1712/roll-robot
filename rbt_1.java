@@ -17,9 +17,11 @@ public class rbt_1 extends SmoothMover
     int x = 0;
     public void act()
     {
-        // Add your action 
+        // Add your action
+        
         move(20);
         launch();
+        bounce_kotak();
         bounce();
         
     }
@@ -37,7 +39,7 @@ public class rbt_1 extends SmoothMover
         if (isAtEdge()){
             turn(-90);
         }
-         if (getY() >= 800){
+        if (getY() >= 800){
             gun gun = new gun();
             getWorld().addObject(gun, getX(), getY());
             laser laser = new laser();
@@ -46,6 +48,12 @@ public class rbt_1 extends SmoothMover
         if(Greenfoot.mouseClicked(null)){
                 getWorld().removeObject(laser);
             }
+        
+        }
+    }
+    public void bounce_kotak(){
+        if(isTouching(kotak.class)){
+           turn(-90);
         }
     }
     public void rest(){

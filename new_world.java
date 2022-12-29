@@ -42,7 +42,7 @@ public class new_world extends World
     return randomNumber;
   }
     void generate_rbt_1(){
-        for (int i = 0;i<=4;i++){
+        for (int i = 0;i<=5;i++){
             rbt_1 rbt = new rbt_1();
             addObject(rbt, 20,20);
         }
