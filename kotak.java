@@ -23,8 +23,8 @@ public class kotak extends Actor
     }
     
     public void avoidOverlap(){
-        while(isTouching(kotak.class) ||  getX() < 25){
-        setLocation(Greenfoot.getRandomNumber(400), 70);
+        while(isTouching(kotak.class) ||  getX() < 30){
+        setLocation(Greenfoot.getRandomNumber(400), 90);
         }
     }
     
@@ -35,8 +35,10 @@ public class kotak extends Actor
     public void aboutKotak(){
         if(isTouching(rbt_1.class)){
         hp--;
+        new_world.skor.add(-1);
         if(hp == 0){
         getWorld().removeObject(this);
+        
         }
         }
     }

@@ -9,6 +9,7 @@ import java.util.Random;
 public class new_world extends World
 {
     static int level = 0;
+    static score skor = new score("Skor : ");
     /**
      * Constructor for objects of class new_world.
      * 
@@ -16,7 +17,7 @@ public class new_world extends World
     public new_world()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(584, 900, 1); 
+        super(600, 900, 1); 
         prepare();
     }
     
@@ -29,8 +30,17 @@ public class new_world extends World
         generate_kotak1();
         gun gun = new gun();
         addObject(gun,274,762);
+        addObject(skor,292,20);
+        skor.setValue(0);
     }
-    
+
+    public static int main(int num_1, int num_2) {
+    Random random = new Random();
+    int min = num_1;
+    int max = num_2;
+    int randomNumber = random.nextInt((max - min) + 1) + min;
+    return randomNumber;
+  }
     void generate_rbt_1(){
         for (int i = 0;i<=4;i++){
             rbt_1 rbt = new rbt_1();
@@ -40,18 +50,25 @@ public class new_world extends World
      void generate_kotak1()
     {
         if(level==0){
+        for(int i = 0; i < 5; i++)
+        {
+            kotak kotak = new kotak();
+            kotak.hp = main(1, 5);
+            addObject(kotak,Greenfoot.getRandomNumber(550), 90);
+            kotak.avoidOverlap();
+        }
+        if(level==1){
         for(int i = 0; i < 3; i++)
         {
             kotak kotak = new kotak();
-            kotak.hp = Greenfoot.getRandomNumber(5);
-            addObject(kotak,Greenfoot.getRandomNumber(400), 70);
+            kotak.hp = main(4, 8);
+            addObject(kotak,Greenfoot.getRandomNumber(554), 90);
             kotak.avoidOverlap();
         }
     }
     }
-    
 }
-
+}
 
 
 
