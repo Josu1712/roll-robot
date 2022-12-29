@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=frame
+comment0.text=\n\ Write\ a\ description\ of\ class\ frame\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=frame()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ Anime()
+numComments=4
