@@ -39,17 +39,14 @@ public class kotak extends Actor
         new_world.skor.add(1);
         if(hp == 0){
         getWorld().removeObject(this);
-        if(new_world.skor.getValue()>= (new_world.level+1)*5)
+        if(new_world.skor.getValue() >= (new_world.level+1)*25)
                 {
                     new_world.level++;
                     String levelup = "level "+ new_world.level;
+                    Greenfoot.setWorld(new lvl_2());
         }
         }
     }
-    else{
-    maju();
-}
-}
 
-
+}
 }

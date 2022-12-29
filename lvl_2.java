@@ -6,21 +6,20 @@ import java.util.Random;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class new_world extends World
+public class lvl_2 extends World
 {
     static int level = 1;
     static score skor = new score("Skor : ");
     /**
-     * Constructor for objects of class new_world.
+     * Constructor for objects of class lvl_2.
      * 
      */
-    public new_world()
+    public lvl_2()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 900, 1); 
         prepare();
     }
-    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
@@ -57,9 +56,15 @@ public class new_world extends World
             addObject(kotak,Greenfoot.getRandomNumber(550), main(90,600));
             kotak.avoidOverlap();
         }
-    }   
+    } else 
+    if(level==2){
+        for(int i = 0; i < 13; i++)
+        {
+            kotak kotak = new kotak();
+            kotak.hp = main(1, 20);
+            addObject(kotak,Greenfoot.getRandomNumber(550), main(90,600));
+            kotak.avoidOverlap();
+        }    
     }
 }
-
-
-
+}
