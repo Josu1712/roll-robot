@@ -23,9 +23,16 @@ public class gun extends Actor
             rbt_1 rbt = new rbt_1();
             getWorld().addObject(rbt, getX(), getY());
             rbt.setRotation(getRotation());
-            
+            rbt_2 rbt_2 = new rbt_2();
+            getWorld().addObject(rbt_2, getX(), getY());
+            rbt_2.setRotation(getRotation());
+            rbt_3 rbt_3 = new rbt_3();
+            getWorld().addObject(rbt_3, getX(), getY());
+            rbt_3.setRotation(getRotation());
+            rbt_4 rbt_4 = new rbt_4();
+            getWorld().addObject(rbt_4, getX(), getY());
+            rbt_4.setRotation(getRotation());
             getWorld().removeObject(this);
-            
         }
         if(Greenfoot.mouseMoved(null)){
             MouseInfo mouse = Greenfoot.getMouseInfo();

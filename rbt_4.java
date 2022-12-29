@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class rbt_1 extends SmoothMover
+public class rbt_4 extends rbt_1
 {
     /**
      * Act - do whatever the rbt_1 wants to do. This method is called whenever
@@ -18,7 +18,7 @@ public class rbt_1 extends SmoothMover
     public void act()
     {
         // Add your action
-        move(20);
+        move(17);
         launch();
         bounce_kotak();
         bounce();
@@ -33,14 +33,7 @@ public class rbt_1 extends SmoothMover
             turn(-89);
         }
         if (getY() >= 800){
-            gun gun = new gun();
-            getWorld().addObject(gun, getX(), getY());
-            laser laser = new laser();
-            getWorld().addObject(laser,getX(),getY());
             getWorld().removeObject(this);
-        if(Greenfoot.mouseClicked(null)){
-                getWorld().removeObject(laser);
-            }
         
         }
     }
