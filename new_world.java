@@ -27,11 +27,16 @@ public class new_world extends World
     private void prepare()
     {
         generate_kotak1();
-        rbt_1 rbt_1 = new rbt_1();
-        addObject(rbt_1,283,797);
+        gun gun = new gun();
+        addObject(gun,274,762);
     }
     
-    
+    void generate_rbt_1(){
+        for (int i = 0;i<=4;i++){
+            rbt_1 rbt = new rbt_1();
+            addObject(rbt, 20,20);
+        }
+    }
      void generate_kotak1()
     {
         if(level==0){
