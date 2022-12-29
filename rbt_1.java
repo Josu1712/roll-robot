@@ -45,6 +45,7 @@ public class rbt_1 extends SmoothMover
             laser laser = new laser();
             getWorld().addObject(laser,getX(),getY());
             getWorld().removeObject(this);
+ 
         if(Greenfoot.mouseClicked(null)){
                 getWorld().removeObject(laser);
             }
@@ -71,4 +72,5 @@ public class rbt_1 extends SmoothMover
         }        
     }
 
+ 
 }

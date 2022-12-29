@@ -20,6 +20,7 @@ public class kotak extends Actor
     public void act(){
         this.nyawa.setValue(hp);
         getWorld().addObject(this.nyawa, getX(), getY());
+        aboutKotak();
     }
     
     public void avoidOverlap(){
@@ -35,12 +36,20 @@ public class kotak extends Actor
     public void aboutKotak(){
         if(isTouching(rbt_1.class)){
         hp--;
-        new_world.skor.add(-1);
+        new_world.skor.add(1);
         if(hp == 0){
         getWorld().removeObject(this);
-        
+        if(new_world.skor.getValue()>= (new_world.level+1)*5)
+                {
+                    new_world.level++;
+                    String levelup = "level "+ new_world.level;
         }
         }
     }
+    else{
+    maju();
+}
+}
+
 
 }
