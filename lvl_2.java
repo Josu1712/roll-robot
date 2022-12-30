@@ -30,6 +30,8 @@ public class lvl_2 extends World
         addObject(gun,274,762);
         addObject(skor,292,20);
         skor.setValue(0);
+        new_world.hp.setValue(8); 
+        addObject(new_world.hp, 300, 850);
     }
 
     public static int main(int num_1, int num_2) {
@@ -48,7 +50,7 @@ public class lvl_2 extends World
      void generate_kotak1()
     {
         if(new_world.level==1){
-        for(int i = 0; i < 13; i++)
+        for(int i = 0; i < 10; i++)
         {
             lvl1 kotak = new lvl1();
             kotak.hp = main(1, 10);
@@ -57,7 +59,7 @@ public class lvl_2 extends World
         }
     } else 
     if(new_world.level==2){
-        for(int i = 0; i < 13; i++)
+        for(int i = 0; i < 8; i++)
         {
             lvl2 kotak = new lvl2();
             kotak.hp = main(10, 20);

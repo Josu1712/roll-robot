@@ -6,22 +6,19 @@ import java.util.Random;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class new_world extends World
+public class lvl_3 extends World
 {
-    static int level = 1;
     static score skor = new score("Skor : ");
-    static score hp = new score("Hp: ");
     /**
-     * Constructor for objects of class new_world.
+     * Constructor for objects of class lvl_3.
      * 
      */
-    public new_world()
+    public lvl_3()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 900, 1); 
         prepare();
     }
-    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
@@ -32,9 +29,9 @@ public class new_world extends World
         gun gun = new gun();
         addObject(gun,274,762);
         addObject(skor,292,20);
-        addObject(hp, 300, 850);
         skor.setValue(0);
-        hp.setValue(5);
+        new_world.hp.setValue(10); 
+        addObject(new_world.hp, 300, 850);
     }
 
     public static int main(int num_1, int num_2) {
@@ -52,17 +49,14 @@ public class new_world extends World
     }
      void generate_kotak1()
     {
-        if(level==1){
+        if(new_world.level == 3){
         for(int i = 0; i < 8; i++)
         {
             lvl1 kotak = new lvl1();
-            kotak.hp = main(1, 10);
+            kotak.hp = main(20, 30);
             addObject(kotak,Greenfoot.getRandomNumber(550), main(90,600));
             kotak.avoidOverlap();
         }
-    }   
-    }
+    } 
 }
-
-
-
+}

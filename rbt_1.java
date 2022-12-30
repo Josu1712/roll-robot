@@ -32,12 +32,16 @@ public class rbt_1 extends SmoothMover
         if (isAtEdge()){
             turn(-89);
         }
+        if(new_world.hp.getValue() == 0){
+        Greenfoot.stop();
+        }
         if (getY() >= 800){
             gun gun = new gun();
             getWorld().addObject(gun, getX(), getY());
             laser laser = new laser();
             getWorld().addObject(laser,getX(),getY());
             getWorld().removeObject(this);
+            new_world.hp.add(-1);
         if(Greenfoot.mouseClicked(null)){
                 getWorld().removeObject(laser);
             }
