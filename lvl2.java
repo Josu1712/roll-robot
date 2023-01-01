@@ -29,6 +29,7 @@ public class lvl2 extends kotak
                 {
                     new_world.level++;
                     String levelup = "level "+ new_world.level;
+                    lvl_2.bg.stop();
                     Greenfoot.setWorld(new lvl_3());
         }
         }

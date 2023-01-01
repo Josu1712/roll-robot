@@ -11,10 +11,14 @@ public class new_world extends World
     static int level = 1;
     static score skor = new score("Skor : ");
     static score hp = new score("Hp: ");
+    static GreenfootSound bg = new GreenfootSound("bg0.mp3");
     /**
      * Constructor for objects of class new_world.
      * 
      */
+    public void started(){
+        bg.playLoop();
+    }
     public new_world()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -43,7 +47,7 @@ public class new_world extends World
     int max = num_2;
     int randomNumber = random.nextInt((max - min) + 1) + min;
     return randomNumber;
-  }
+    }
     void generate_rbt_1(){
         for (int i = 0;i<=5;i++){
             rbt_1 rbt = new rbt_1();

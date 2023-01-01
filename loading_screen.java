@@ -14,7 +14,6 @@ public class loading_screen extends World
      * 
      */
     public void started(){
-        bg = new GreenfootSound("bg0.mp3");
         bg.playLoop();
     }
     public void act(){

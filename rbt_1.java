@@ -32,16 +32,20 @@ public class rbt_1 extends SmoothMover
         if (isAtEdge()){
             turn(-89);
         }
-        if(new_world.hp.getValue() == 0){
-        Greenfoot.stop();
+        if(new_world.hp.getValue() <= 1){
+        Greenfoot.setWorld(new game_over());
+        new_world.bg.stop();
+        lvl_2.bg.stop();
+        lvl_3.bg.stop();
         }
-        if (getY() >= 800){
+        if (getY() >= 895){
             gun gun = new gun();
-            getWorld().addObject(gun, getX(), getY());
+            getWorld().addObject(gun, getX(), 800);
             laser laser = new laser();
-            getWorld().addObject(laser,getX(),getY());
+            getWorld().addObject(laser,getX(),800);
             getWorld().removeObject(this);
             new_world.hp.add(-1);
+
         if(Greenfoot.mouseClicked(null)){
                 getWorld().removeObject(laser);
             }
@@ -56,18 +60,13 @@ public class rbt_1 extends SmoothMover
            }
         }
     }
-    public void rest(){
-        if(getY() >= 800){
-            move(0);
-        }
-    }
     public void launch(){
         if (Greenfoot.mouseClicked(null)){
             MouseInfo mouse = Greenfoot.getMouseInfo();
             int rx = mouse.getX() - getX();
             int ry = mouse.getY() - getY();
             int angle = (int) (Math.atan2(rx,ry)*180.0/Math.PI);
-            setRotation(angle);
+            setRotation(angle+90);
         }        
     }
 

@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=rbt_1
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ rbt_1\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ rbt_1\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=void\ act()
 comment2.params=
@@ -10,7 +10,5 @@ comment3.target=void\ bounce()
 comment4.params=
 comment4.target=void\ bounce_kotak()
 comment5.params=
-comment5.target=void\ rest()
-comment6.params=
-comment6.target=void\ launch()
-numComments=7
+comment5.target=void\ launch()
+numComments=6

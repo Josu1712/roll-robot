@@ -9,10 +9,17 @@ import java.util.Random;
 public class lvl_2 extends World
 {
     static score skor = new score("Skor : ");
+    static GreenfootSound bg = new GreenfootSound("lv2.mp3");
     /**
      * Constructor for objects of class lvl_2.
      * 
      */
+    public void started(){
+        
+    }
+    public void act(){
+        bg.playLoop();
+    }
     public lvl_2()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.

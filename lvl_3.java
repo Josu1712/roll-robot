@@ -9,10 +9,17 @@ import java.util.Random;
 public class lvl_3 extends World
 {
     static score skor = new score("Skor : ");
+    static GreenfootSound bg = new GreenfootSound("lv3.mp3");
     /**
      * Constructor for objects of class lvl_3.
      * 
      */
+    public void started(){
+        bg.playLoop();
+    }
+    public void act(){
+        started();
+    }
     public lvl_3()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -40,7 +47,7 @@ public class lvl_3 extends World
     int max = num_2;
     int randomNumber = random.nextInt((max - min) + 1) + min;
     return randomNumber;
-  }
+      }
     void generate_rbt_1(){
         for (int i = 0;i<=5;i++){
             rbt_1 rbt = new rbt_1();
@@ -52,11 +59,11 @@ public class lvl_3 extends World
         if(new_world.level == 3){
         for(int i = 0; i < 8; i++)
         {
-            lvl1 kotak = new lvl1();
+            lvl3 kotak = new lvl3();
             kotak.hp = main(20, 30);
             addObject(kotak,Greenfoot.getRandomNumber(550), main(90,600));
             kotak.avoidOverlap();
         }
     } 
-}
+    }
 }
