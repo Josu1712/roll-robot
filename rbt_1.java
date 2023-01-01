@@ -23,11 +23,6 @@ public class rbt_1 extends SmoothMover
         bounce_kotak();
         bounce();
     }
-    public void run(){
-        if (isAtEdge()){
-            turn(45);
-        }
-    }
     public void bounce(){
         if (isAtEdge()){
             turn(-89);
@@ -69,5 +64,4 @@ public class rbt_1 extends SmoothMover
             setRotation(angle+90);
         }        
     }
-
 }
