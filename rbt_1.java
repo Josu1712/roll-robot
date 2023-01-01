@@ -25,15 +25,15 @@ public class rbt_1 extends SmoothMover
     }
     public void bounce(){
         if (isAtEdge()){
-            turn(-89);
-        }
-        if(new_world.hp.getValue() <= 1){
-        Greenfoot.setWorld(new game_over());
-        new_world.bg.stop();
-        lvl_2.bg.stop();
-        lvl_3.bg.stop();
+            turn(90);
         }
         if (getY() >= 895){
+            if(new_world.hp.getValue() <=1){
+            Greenfoot.setWorld(new game_over());
+            new_world.bg.stop();
+            lvl_2.bg.stop();
+            lvl_3.bg.stop();
+        }
             gun gun = new gun();
             getWorld().addObject(gun, getX(), 800);
             laser laser = new laser();
@@ -41,18 +41,15 @@ public class rbt_1 extends SmoothMover
             getWorld().removeObject(this);
             new_world.hp.add(-1);
 
-        if(Greenfoot.mouseClicked(null)){
+        if(Greenfoot.mouseClicked(null))
+            {
                 getWorld().removeObject(laser);
             }
-        
         }
     }
     public void bounce_kotak(){
         if(isTouching(kotak.class)){
-           turn(-90);
-           for( int i = 0 ; i<= 3;i++){
-               getWorld().addObject(this, 59, 5);
-           }
+           turn(90);
         }
     }
     public void launch(){
@@ -61,7 +58,7 @@ public class rbt_1 extends SmoothMover
             int rx = mouse.getX() - getX();
             int ry = mouse.getY() - getY();
             int angle = (int) (Math.atan2(rx,ry)*180.0/Math.PI);
-            setRotation(angle+90);
+            setRotation(angle);
         }        
     }
 }

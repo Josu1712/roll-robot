@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class coming_soon extends World
 {
-    static GreenfootSound bg = new GreenfootSound("bg0.mp3"); 
+    static GreenfootSound bg = new GreenfootSound("lv2.mp3"); 
     /**
      * Constructor for objects of class loading_screen.
      * 
