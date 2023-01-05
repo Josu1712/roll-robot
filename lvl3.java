@@ -22,8 +22,8 @@ public class lvl3 extends kotak
         public void aboutKotak(){
         if(isTouching(rbt_1.class)){
         hp--;
-        lvl_3.skor.add(1);
         if(hp == 0){
+        lvl_3.skor.add(1);
         getWorld().removeObject(this);
         if(lvl_3.skor.getValue() == 8)
                 {

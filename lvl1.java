@@ -19,7 +19,7 @@ public class lvl1 extends kotak
         getWorld().addObject(this.nyawa, getX(), getY());
         aboutKotak();
     }
-        public void aboutKotak(){
+    public void aboutKotak(){
         if(isTouching(rbt_1.class)){
         hp--;
         if(hp == 0){
@@ -30,7 +30,7 @@ public class lvl1 extends kotak
                     new_world.level++;
                     String levelup = "level "+ new_world.level;
                     new_world.bg.stop();
-                    Greenfoot.setWorld(new lvl_2());
+                    Greenfoot.setWorld(new loading());
                 }
             }
         }

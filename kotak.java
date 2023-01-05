@@ -30,6 +30,4 @@ public class kotak extends Actor
     public void maju(){
         setLocation(getX(), getY() + 20);
     }
-    
-
 }

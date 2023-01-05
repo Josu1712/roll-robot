@@ -19,7 +19,7 @@ public class game_over extends World
     public void act(){
         started();
         if(Greenfoot.isKeyDown("enter")){
-            Greenfoot.setWorld(new new_world());
+            Greenfoot.setWorld(new loading());
             bg.stop();
         }
     }

@@ -11,7 +11,7 @@ public class new_world extends World
     static int level = 1;
     static score skor = new score("Skor : ");
     static score hp = new score("Hp: ");
-    static GreenfootSound bg = new GreenfootSound("bg0.mp3");
+    static GreenfootSound bg = new GreenfootSound("lv2.mp3");
     /**
      * Constructor for objects of class new_world.
      * 
@@ -24,6 +24,7 @@ public class new_world extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 900, 1); 
         prepare();
+       
     }
     
     /**
@@ -39,6 +40,7 @@ public class new_world extends World
         addObject(hp, 300, 850);
         skor.setValue(0);
         hp.setValue(5);
+        started();
     }
 
     public static int main(int num_1, int num_2) {

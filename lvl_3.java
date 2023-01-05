@@ -17,9 +17,6 @@ public class lvl_3 extends World
     public void started(){
         bg.playLoop();
     }
-    public void act(){
-        started();
-    }
     public lvl_3()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -30,6 +27,13 @@ public class lvl_3 extends World
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
      */
+    public void act(){
+        started();
+        for (int i = 0;i <= 200;i++){
+            snow snow = new snow();
+            addObject(snow,Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(900));
+        }
+    }
     private void prepare()
     {
         generate_kotak1();
@@ -39,8 +43,8 @@ public class lvl_3 extends World
         skor.setValue(0);
         new_world.hp.setValue(10); 
         addObject(new_world.hp, 300, 850);
+        started();
     }
-
     public static int main(int num_1, int num_2) {
     Random random = new Random();
     int min = num_1;
@@ -54,9 +58,27 @@ public class lvl_3 extends World
             addObject(rbt, 20,20);
         }
     }
-     void generate_kotak1()
+    void generate_kotak1()
     {
-        if(new_world.level == 3){
+        if(new_world.level==1){
+        for(int i = 0; i < 10; i++)
+        {
+            lvl1 kotak = new lvl1();
+            kotak.hp = main(1, 10);
+            addObject(kotak,Greenfoot.getRandomNumber(550), main(90,600));
+            kotak.avoidOverlap();
+        }
+    } else 
+    if(new_world.level==2){
+        for(int i = 0; i < 8; i++)
+        {
+            lvl2 kotak = new lvl2();
+            kotak.hp = main(10, 20);
+            addObject(kotak,Greenfoot.getRandomNumber(550), main(90,600));
+            kotak.avoidOverlap();
+        }    
+    }else
+    if(new_world.level == 3){
         for(int i = 0; i < 8; i++)
         {
             lvl3 kotak = new lvl3();

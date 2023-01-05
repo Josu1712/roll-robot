@@ -17,8 +17,13 @@ public class loading_screen extends World
         bg.playLoop();
     }
     public void act(){
+        started();
+        for (int i = 0;i <= 100;i++){
+            snow snow = new snow();
+            addObject(snow,Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(900));
+        }
         if(Greenfoot.isKeyDown("enter")){
-            Greenfoot.setWorld(new new_world());
+            Greenfoot.setWorld(new loading());
             bg.stop();
         }
     }

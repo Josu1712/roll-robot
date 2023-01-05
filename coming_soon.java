@@ -17,6 +17,7 @@ public class coming_soon extends World
         bg.playLoop();
     }
     public void act(){
+        started();
         if(Greenfoot.isKeyDown("enter")){
             Greenfoot.setWorld(new loading_screen());
             bg.stop();

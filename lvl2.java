@@ -25,14 +25,14 @@ public class lvl2 extends kotak
         if(hp == 0){
         getWorld().removeObject(this);
         lvl_2.skor.add(1);
-        if(lvl_2.skor.getValue() == 1)
+        if(lvl_2.skor.getValue() == 8)
                 {
                     new_world.level++;
                     String levelup = "level "+ new_world.level;
                     lvl_2.bg.stop();
-                    Greenfoot.setWorld(new lvl_3());
+                    Greenfoot.setWorld(new loading());
+        }
         }
         }
     }
-}
 }

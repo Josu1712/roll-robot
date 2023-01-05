@@ -13,14 +13,14 @@ public class roll_robot extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     GreenfootImage [] images = new GreenfootImage[8];
-    int delay = 20, num =0;
+    int delay = 12, num =0;
     
     public roll_robot(){
         Anime();
     }
     public void act()
     {
-        if(delay==0)delay=20;
+        if(delay==0)delay=12;
         if(delay==1){
             setImage(images[num]);
             num++;

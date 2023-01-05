@@ -15,10 +15,10 @@ public class lvl_2 extends World
      * 
      */
     public void started(){
-        
+        bg.playLoop();
     }
     public void act(){
-        bg.playLoop();
+        started();
     }
     public lvl_2()
     {    
