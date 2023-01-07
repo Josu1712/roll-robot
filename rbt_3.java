@@ -18,19 +18,19 @@ public class rbt_3 extends rbt_1
     public void act()
     {
         // Add your action
-        move(18);
+        move(14);
         launch();
         bounce_kotak();
         bounce();
     }
     public void run(){
         if (isAtEdge()){
-            turn(45);
+            turn(90);
         }
     }
     public void bounce(){
         if (isAtEdge()){
-            turn(-89);
+            turn(90);
         }
         if (getY() >= 800){
             getWorld().removeObject(this);

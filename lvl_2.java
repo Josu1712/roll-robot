@@ -9,6 +9,7 @@ import java.util.Random;
 public class lvl_2 extends World
 {
     static score skor = new score("Skor : ");
+    static GreenfootSound bg = new GreenfootSound("lv2.mp3"); 
     /**
      * Constructor for objects of class lvl_2.
      * 
@@ -23,6 +24,9 @@ public class lvl_2 extends World
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
      */
+    public void started(){
+        bg.playLoop();
+    }
     private void prepare()
     {
         generate_kotak1();
@@ -48,7 +52,7 @@ public class lvl_2 extends World
      void generate_kotak1()
     {
         if(new_world.level==1){
-        for(int i = 0; i < 13; i++)
+        for(int i = 0; i < 8; i++)
         {
             lvl1 kotak = new lvl1();
             kotak.hp = main(1, 10);

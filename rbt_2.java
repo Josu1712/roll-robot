@@ -18,19 +18,19 @@ public class rbt_2 extends rbt_1
     public void act()
     {
         // Add your action
-        move(19);
+        move(15);
         launch();
         bounce_kotak();
         bounce();
     }
     public void run(){
         if (isAtEdge()){
-            turn(45);
+            turn(90);
         }
     }
     public void bounce(){
         if (isAtEdge()){
-            turn(-89);
+            turn(90);
         }
         if (getY() >= 800){
             getWorld().removeObject(this);
@@ -39,7 +39,7 @@ public class rbt_2 extends rbt_1
     }
     public void bounce_kotak(){
         if(isTouching(kotak.class)){
-           turn(-90);
+           turn(90);
            for( int i = 0 ; i<= 3;i++){
                getWorld().addObject(this, 59, 5);
            }

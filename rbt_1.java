@@ -14,23 +14,28 @@ public class rbt_1 extends SmoothMover
      */
     int dx = 5;
     int dy = 5;
-    int x = 0;
+    private int x = 0;
     public void act()
     {
         // Add your action
-        move(20);
+        if(x >=3){
+            Greenfoot.setWorld(new loading_screen());
+            
+        }
+        move(16);
         launch();
         bounce_kotak();
         bounce();
     }
     public void run(){
         if (isAtEdge()){
-            turn(45);
+            turn(90);
         }
     }
     public void bounce(){
         if (isAtEdge()){
-            turn(-89);
+            turn(90);
+            x++;
         }
         if (getY() >= 800){
             gun gun = new gun();
@@ -43,10 +48,11 @@ public class rbt_1 extends SmoothMover
             }
         
         }
+        x = +1;
     }
     public void bounce_kotak(){
         if(isTouching(kotak.class)){
-           turn(-90);
+           turn(90);
            for( int i = 0 ; i<= 3;i++){
                getWorld().addObject(this, 59, 5);
            }

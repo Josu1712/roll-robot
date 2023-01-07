@@ -8,13 +8,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class loading_screen extends World
 {
-    static GreenfootSound bg = new GreenfootSound("bg0.mp3"); 
+    static GreenfootSound bg = new GreenfootSound("lv1.mp3"); 
     /**
      * Constructor for objects of class loading_screen.
      * 
      */
     public void started(){
-        bg = new GreenfootSound("bg0.mp3");
         bg.playLoop();
     }
     public void act(){

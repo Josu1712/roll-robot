@@ -16,7 +16,6 @@ public class gun extends Actor
     {
         // Add your action code here.
         mouse();
-        
     }
     public void mouse(){
         if(Greenfoot.mouseClicked(null)){
